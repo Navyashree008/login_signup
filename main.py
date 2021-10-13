@@ -3,7 +3,7 @@ def check_userid(name):
     f1 = f.read()
     if name in f1:
         print("name alredy exist")
-        signupWaala()
+        signup()
     else:
         print("valid user name")
 
@@ -30,12 +30,12 @@ def valid_password(password,check_password):
             i+=1
         else:
             print("the password should contain number also")
-            signupWaala()
+            signup()
                 
 
     else:
         print("the password should contain at least one special charecter")
-        signupWaala()
+        signup()
         
 # # input to dictionary
 
@@ -49,7 +49,7 @@ def dictionary(name,password,profile):
 
 # import json
 
-def signupWaala():
+def signup():
         #  sign up information will be asked here:
     name = input("enter your name:")
     check_userid(name)
@@ -89,6 +89,6 @@ def login():
     #     i+=1
 user_wish = input("enter whether you want to login or signup")
 if user_wish == "signup":
-    signupWaala()
+    signup()
 else:
     login()
